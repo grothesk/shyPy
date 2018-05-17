@@ -14,7 +14,6 @@ def test_check_raise_decorator():
     def is_str(data):
         return isinstance(data, str)
 
-
     class NoInt(Exception):
         pass
 
@@ -24,21 +23,18 @@ def test_check_raise_decorator():
     class NoStr(Exception):
         pass
 
-
     CheckInt = CheckRaiseDecorator(is_int, NoInt)
     CheckPos = CheckRaiseDecorator(is_pos, NotPos)
     CheckStr = CheckRaiseDecorator(is_str, NoStr)
 
-
-    @CheckInt([0, 1])
-    @CheckPos([1])
-    @CheckStr([2])
+    @CheckInt(0, 1)
+    @CheckPos(1)
+    @CheckStr(2)
     def print_int_posint_str(a, b, c):
         print()
         print(a)
         print(b)
         print(c)
-
 
     assert print_int_posint_str(-1, 1, 'Test') is None
 
