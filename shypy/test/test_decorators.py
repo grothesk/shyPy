@@ -1,6 +1,6 @@
 import pytest
 
-from shypy.util.decorators import CheckRaiseDecorator
+from shypy.decorators import CheckRaiseDecorator
 
 
 def test_check_raise_decorator():

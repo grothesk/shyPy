@@ -1,7 +1,7 @@
 from functools import wraps
 
 
-class CheckRaiseDecorator():
+class CheckRaiseDecorator:
     """
     This class can be used to create decorators for checking input arguments of
     the decorated functions for certain conditions.
