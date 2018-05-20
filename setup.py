@@ -9,6 +9,7 @@ URL = 'https://github.com/grothesk/shyPy'
 EMAIL = 'malte.groth@gmx.net'
 AUTHOR = 'Malte Groth'
 REQUIRES_PYTHON = '>=3.6.0'
+REQUIRED = ['pytest']
 
 
 with open('README.rst') as f:
@@ -28,6 +29,7 @@ setup(
     python_requires=REQUIRES_PYTHON,
     url=URL,
     packages=find_packages(),  # nothing to exclude so far
+    install_requires=REQUIRED,
     license=license,
     classifiers=[  # yes, it's planned to have it some day on https://pypi.org
         'License :: OSI Approved :: MIT License',
