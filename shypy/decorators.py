@@ -48,7 +48,7 @@ def log_execution_time(log_func):
     Among other things, the decorator is suitable for observing the processing
     of growing data sets.
     """
-    def _log_execution_time(func):
+    def log_execution_time_decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
             start_time = time.time()
@@ -57,4 +57,4 @@ def log_execution_time(log_func):
             log_func(func.__name__, start_time, end_time)
             return result
         return wrapper
-    return _log_execution_time
+    return log_execution_time_decorator
