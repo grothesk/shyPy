@@ -41,4 +41,4 @@ the ETL process has been revised. This scenario could be implemented with the **
     for f in file_paths:
         process_data(f)
 
-In this example, process_data would only be executed if f had not yet been processed for ETL_VERSION '1.0.0'.
+In this example, **process_data** would only be executed if **f** had not yet been processed for **ETL_VERSION** '1.0.0'.
