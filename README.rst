@@ -23,6 +23,7 @@ you only feed each file to the process once. On the other hand, you want to edit
 the ETL process has been revised. This scenario could be implemented with the RepititionsExcluder as follows:
 
 .. code-block:: python
+
     from shypy.decorators import RepititionsExcluder
 
 
