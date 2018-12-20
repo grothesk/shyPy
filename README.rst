@@ -28,7 +28,7 @@ the ETL process has been revised. This scenario could be implemented with the **
 
 
     ETL_VERSION = '1.0.0'
-    REGISTRY_FILE_PATH = 'registry.txt
+    REGISTRY_FILE_PATH = 'registry.txt'
 
 
     repex = RepititionsExcluder(REGISTRY_FILE_PATH, [ETL_VERSION])
