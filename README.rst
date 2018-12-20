@@ -19,7 +19,7 @@ shyPy contains the following classes for providing decorators:
 
 Imagine the following situation: You have a large amount of files with raw data. With an ETL process you transfer the
 data periodically into a data warehouse. Since the ETL process is very complex and demanding, you want to make sure that
-you only feed each file to the process once. On the other hand, you want to edit the already processed data again when
+you only feed each file to the process once. On the other hand, you want to process the data again when
 the ETL process has been revised. This scenario could be implemented with the RepititionsExcluder as follows:
 
 .. code-block:: python
