@@ -1,6 +1,6 @@
 import pytest
 
-from shypy.decorators import CheckRaiseDecorator
+from shypy.decorators import CheckRaiser
 
 
 def test_check_raise_decorator():
@@ -23,9 +23,9 @@ def test_check_raise_decorator():
     class NoStr(Exception):
         pass
 
-    CheckInt = CheckRaiseDecorator(is_int, NoInt)
-    CheckPos = CheckRaiseDecorator(is_pos, NotPos)
-    CheckStr = CheckRaiseDecorator(is_str, NoStr)
+    CheckInt = CheckRaiser(is_int, NoInt)
+    CheckPos = CheckRaiser(is_pos, NotPos)
+    CheckStr = CheckRaiser(is_str, NoStr)
 
     @CheckInt(0, 1)
     @CheckPos(1)
