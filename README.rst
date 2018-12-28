@@ -1,6 +1,9 @@
 shyPy
 =====
 
+.. image:: https://travis-ci.org/grothesk/shyPy.svg?branch=master
+    :target: https://travis-ci.org/grothesk/shyPy
+
 A shy Python package with things I secretly like to use.
 
 Installation
