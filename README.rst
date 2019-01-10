@@ -9,8 +9,12 @@ A shy Python package with things I secretly like to use.
 Installation
 ------------
 
-...
+You can install shyPy like this:
 
+.. code-block:: bash
+
+    pip install git+https://github.com/grothesk/shypy
+    
 
 Decorators
 ----------
