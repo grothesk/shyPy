@@ -76,6 +76,7 @@ Add update functions to Flask's cli commands like this:
 Finally, only the following two steps are left: integrating the functions into the app and creating the cron
 jobs for calling the update functions.
 
+Please note: to keep the API simple, NeoCache only allows the registration of functions without input arguments. This also avoids having to persist the used input parameters for the cache update. Sometimes it may therefore necessary to write a wrapper function.
 
 RepititionsExcluder
 ----------
