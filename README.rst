@@ -23,7 +23,7 @@ a Flask app. The database queries are quite time-consuming. The data should be u
 have to be available in real time.
 In this case, NeoCache can help to avoid users being confronted with long loading times.
 
-With NeoCache.register() as a decorator, functions can be added to a caching mechanism. At the same time, the NeoCache object remembers
+With NeoCache.register() functions can be added to a caching mechanism. At the same time, the NeoCache object remembers
 these functions in order to update the cache via NeoCache.update() on demand.
 
 Register functions like this:
