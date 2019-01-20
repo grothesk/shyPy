@@ -98,6 +98,7 @@ the ETL process has been revised. This scenario could be implemented with the **
 
     repex = RepititionsExcluder(REGISTRY_FILE_PATH, [ETL_VERSION])
 
+
     @repex.exclude_repititions
     def process_data(file_path):
         ...
