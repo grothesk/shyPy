@@ -1,5 +1,6 @@
 import hashlib
 import os
+import inspect
 from joblib import Memory
 
 
@@ -22,6 +23,12 @@ class NeoCache:
         registered and that the function is handled as a MemorizedFunc.
         """
         def decorator(func):
+            if len(inspect.signature(func).parameters) > 0:
+                raise TypeError(
+                    'The signature of \'{}\' contains input arguments. '
+                    'NeoCache only supports registering functions without '
+                    'any input arguments.'.format(func.__name__)
+                )
             func = self.memory.cache(func)
             self.registry[func.__name__] = func
             return func

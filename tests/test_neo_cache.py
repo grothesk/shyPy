@@ -47,3 +47,12 @@ def test_basic_functionality(dummy_cache):
 
     dummy_cache.update()
     assert demo_cnt == 3
+
+
+def test_function_with_input_argument(dummy_cache):
+
+    def func_with_input(input):
+        pass
+
+    with pytest.raises(TypeError):
+        assert dummy_cache.register(func_with_input)
