@@ -18,12 +18,13 @@ You can install shyPy like this:
 NeoCache
 --------
 Imagine the following use case:
-tracking events are collected in a database. Statistics and plots of the data available in the database are provided via
+app tracking events are collected in a database. Statistics and plots according to the data available in the database are provided via
 a Flask app. The database queries are quite time-consuming. The data should be updated regularly, but do not
 have to be available in real time.
+In this case, NeoCache can help to avoid users being confronted with long loading times.
 
-With NeoCache.register() as a decorator, functions can be added to a caching mechanism. At the same time, the NeoCache object remembers
-these functions in order to update the cache via NeoCache.update() if necessary.
+With NeoCache.register() functions can be added to a caching mechanism. At the same time, the NeoCache object remembers
+these functions in order to update the cache via NeoCache.update() on demand.
 
 Register functions like this:
 
@@ -73,9 +74,10 @@ Add update functions to Flask's cli commands like this:
     def update_cache_weekly():
         weekly_update.update()
 
-Finally, only the following 2 steps need to be performed: integrating the functions into the app and creating the cron
-jobs calling the update functions.
+Finally, only the following two steps are left: integrating the functions into the app and creating the cron
+jobs for calling the update functions.
 
+Please note: to keep the API simple, NeoCache only allows the registration of functions without input arguments. This also avoids having to persist the used input parameters for the cache update. Sometimes it may therefore necessary to write a wrapper function.
 
 RepititionsExcluder
 ----------
@@ -95,6 +97,7 @@ the ETL process has been revised. This scenario could be implemented with the **
 
 
     repex = RepititionsExcluder(REGISTRY_FILE_PATH, [ETL_VERSION])
+
 
     @repex.exclude_repititions
     def process_data(file_path):
