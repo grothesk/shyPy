@@ -18,10 +18,10 @@ You can install shyPy like this:
 NeoCache
 --------
 Imagine the following use case:
-app tracking events are collected in a database. Statistics and plots according to the data available in the database are provided via
-a Flask app. The database queries are quite time-consuming. The data should be updated regularly, but do not
-have to be available in real time.
-In this case, NeoCache can help to avoid users being confronted with long loading times.
+app tracking events are collected in a database. Statistics and plots according to the data available in the database
+are provided via a Flask app. The database queries are quite time-consuming. The data should be updated regularly, but
+do not have to be available in real time. In this case, NeoCache can help to avoid users being confronted with long
+loading times.
 
 With NeoCache.register() functions can be added to a caching mechanism. At the same time, the NeoCache object remembers
 these functions in order to update the cache via NeoCache.update() on demand.
@@ -77,7 +77,9 @@ Add update functions to Flask's cli commands like this:
 Finally, only the following two steps are left: integrating the functions into the app and creating the cron
 jobs for calling the update functions.
 
-Please note: to keep the API simple, NeoCache only allows the registration of functions without input arguments. This also avoids having to persist the used input parameters for the cache update. Sometimes it may therefore necessary to write a wrapper function.
+Please note: to keep the API simple, NeoCache only allows the registration of functions without input arguments.
+This also avoids having to persist the used input parameters for the cache update. Sometimes it may therefore necessary
+to write a wrapper function.
 
 RepititionsExcluder
 ----------
