@@ -1,7 +1,7 @@
 import pytest
 import os
 
-from shypy.decorators import RepititionsExcluder
+from shypy.caching import RepititionsExcluder
 
 
 @pytest.fixture(scope="function")
